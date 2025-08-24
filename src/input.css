@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    p {
+        @apply text-sm;
+    }
+    h2{
+        @apply text-2xl font-bold;
+    }
+    button{
+        @apply text-sm
+    }
+    .features h1{
+        @apply text-xl font-semibold
+    }
+    .features p{
+        @apply text-[14px]
+    }
+    .features img{
+        @apply w-[40px] 
+    }
+    #image img{
+        @apply w-full
+    }
+
+}
