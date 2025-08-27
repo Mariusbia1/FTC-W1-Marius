@@ -22,12 +22,32 @@
                     <li><a class="px-5 py-2 ml-4 border text-[#ebebeb]  hover:bg-[#ebebeb] hover:text-[#0b081c] transition-colors rounded-3xl" href="#">Talk to an expert</a></li>
                 </ul>
             </div>
+            <!-- Menu mobile, caché par défaut -->
+            <div id="mobile-menu" class="fixed inset-0 bg-[#0b0121] bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-8 text-2xl font-bold md:hidden">
+              <a href="#">Features</a>
+              <a href="#">Pricing</a>
+              <a href="#">About us</a>
+              <a href="#" class="px-5 py-2 text-[#0b081c] bg-[#ebebeb] hover:bg-white rounded-3xl">Download the app</a>
+              <a href="#" class="px-5 py-2 border text-[#ebebeb] hover:bg-[#ebebeb] hover:text-[#0b081c] transition-colors rounded-3xl">Talk to an expert</a>
+              <button id="close-mobile-menu" class="absolute top-6 right-6 text-white text-3xl">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+              </button>
+            </div>
+            <!-- Ajoute ce bouton dans ta navbar, visible seulement sur mobile -->
+            <button id="mobile-menu-btn" class="md:hidden text-white">
+            
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </nav>
         
         <section class="hero min-h-screen  flex items-center bg-cover bg-no-repeat justify-center pt-[5%] w-full" style="background-image: url('./assets/images/hero.png')">
             <div class="flex flex-col  gap-6 items-center text-center pt-[5%] px-[5%] mt-2/5  w-[90%]">
                 <p class="border text-[14px] border-gray-100 opacity-65 text-text rounded-3xl px-5 py-2 lg:text-[18px] border-opacity-30 "> We just raised $20M in Series B. Learn more</p>
-                <h1 class="font-bold text-2xl md:text-4xl lg:text-[80px] uppercase text-[#ebebeb] bg-gradient-to-b from-[#ebebeb] to-[#ebebeb00] bg-clip-text ">
+                <h1 class="font-bold text-2xl md:text-4xl lg:text-[80px] uppercase text-[#ebebeb] lg:leading-[88px] bg-gradient-to-b from-[#ebebeb] to-[#ebebeb00] bg-clip-text ">
                     Modern analytics <br> for the modern world
                 </h1>
                 <p class="text-[14px] md:text-[16px] text-text align-center leading[1.6] opacity-65 md:w-[62%]">
@@ -160,5 +180,21 @@
             </div>
         </footer>
         </div>
+
+
+        <script>
+        // filepath: /home/Marius_GBK/Bureau/projets_new/FTC-W1/src/index.html
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-mobile-menu');
+                
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.remove('hidden');
+        });
+        
+        closeBtn.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+</script>
 </body>
 </html>
