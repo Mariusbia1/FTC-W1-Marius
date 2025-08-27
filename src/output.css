@@ -588,6 +588,10 @@ button {
   width: 100%;
 }
 
+#mobile-menu {
+  font-size: 16px;
+}
+
 .container {
   width: 100%;
 }
@@ -1288,14 +1292,6 @@ button {
 @media (min-width: 1024px) {
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
-  }
-
-  .lg\:block {
-    display: block;
-  }
-
-  .lg\:hidden {
-    display: none;
   }
 
   .lg\:w-1\/2 {

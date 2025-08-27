@@ -24,5 +24,8 @@
     #image img{
         @apply w-full
     }
+    #mobile-menu{
+        @apply text-[16px]
+    }
 
 }
